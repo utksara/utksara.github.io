@@ -38,4 +38,4 @@ setInterval(simulate, 10);
 
 init_setup()
 document.getElementById("wobble").onclick = function() {break_sim = false;}
-document.getElementById("reset").onclick = function() {break_sim = true;}
+document.getElementById("stop").onclick = function() {break_sim = true;}
