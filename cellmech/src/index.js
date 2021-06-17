@@ -24,14 +24,18 @@ function init_setup(){
     document.getElementById("canvas").setAttribute('width',screen.width);
 }
 
+let break_sim = false;
 function simulate(){
-    for (let i = 0; i<list_of_items.length; i++){
-        let an_item = list_of_items[i];
-        an_item.render();
+
+    if (!break_sim){
+        for (let i = 0; i<list_of_items.length; i++){
+            let an_item = list_of_items[i];
+            an_item.render();
+        }   
     }
 }
-
+setInterval(simulate, 10);
 
 init_setup()
-// simulate()
-setInterval( simulate, 10);
+document.getElementById("wobble").onclick = function() {break_sim = false;}
+document.getElementById("reset").onclick = function() {break_sim = true;}
