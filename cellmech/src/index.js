@@ -1,15 +1,17 @@
 import * as shapes from './shapes.js';
+const ws = new WebSocket("ws://192.168.0.107:8082");
 
 class item {
-    constructor( id ,shape, position){
+    constructor( id ,shape){
         this.id = id;
         this.shape = shape;
-        this.postion = position; 
+        this.position = shape.center; 
     }
     render() {
-        // let string_of_points = tranform_coordinates_to_string( this.shape.array_of_points );
-        // console.log(string_of_points)
         document.getElementById(this.id).setAttribute('points', this.shape.get_points());
+        if(this.id == 'cntr1'){
+            console.log(document.getElementById(this.id).getAttribute('points'));
+        }
     }
 }
 
@@ -18,24 +20,67 @@ var list_of_items  = [
     new item('nucleus', new shapes.circle(20, [600,250]))
 ];
 
+function get_item_by_id(id){
+    for (var i = 0; i< list_of_items.length ; i++){
+        let elem = list_of_items[i];
+        if (elem.id == id){
+            return elem;
+        }
+    }
+}
+
 function init_setup(){
     // console.log(startime_time);
     document.getElementById("canvas").setAttribute('height',screen.height);
     document.getElementById("canvas").setAttribute('width',screen.width);
+    for (let i = 0; i<list_of_items.length; i++){
+        let an_item = list_of_items[i];
+        an_item.render();
+    }
 }
 
-let break_sim = false;
-function simulate(){
+let break_sim = true;
 
+function simulate(){
     if (!break_sim){
         for (let i = 0; i<list_of_items.length; i++){
             let an_item = list_of_items[i];
             an_item.render();
-        }   
+        }
     }
 }
 setInterval(simulate, 10);
 
-init_setup()
+init_setup();
 document.getElementById("wobble").onclick = function() {break_sim = false;}
 document.getElementById("stop").onclick = function() {break_sim = true;}
+
+ws.addEventListener("open", () => {
+    console.log("Connection established with server");
+});
+
+const xmlns = "http://www.w3.org/2000/svg";
+
+ws.onmessage = function (event) {
+    var g = document.createElementNS(xmlns, "g");
+    var cntr1 = document.createElementNS(xmlns, "path");
+    cntr1.setAttributeNS(null, 'id', "cntr1");
+    cntr1.setAttribute(null, 'fill');
+    cntr1.setAttributeNS(null, 'd', event.data);
+    g.appendChild(cntr1);
+    var svgContainer = document.getElementById("canvas");
+    svgContainer.appendChild(g);
+
+    list_of_items.push(new item('cntr1', new shapes.anything(event.data)));
+}
+
+document.getElementById("contourmesh").onclick = function() {
+    // ws.send("cell_membrane ")
+    let values = get_item_by_id('cell').shape.center.toString();
+    var msg = {
+        "functname" : "contourmesh",
+        "values" : values
+    };
+    ws.send(JSON.stringify(msg));
+    // ws.send(get_item_by_id('cell').shape.get_points());
+}

@@ -65,7 +65,6 @@ class circle extends shape{
     get_points(){
         this.calculate_points();
         this.points();
-        console.log(this.string_of_points);
         return this.string_of_points;
     }
 }
@@ -97,7 +96,25 @@ class jelly extends shape{
     }
 }
 
+class anything extends shape{
+    constructor (string_of_points){
+        super();
+        this.isdynamic == false;
+        this.string_of_points = string_of_points
+        this.calculate_points();
+    }
+    calculate_points(){
+        // this.array_of_points = add_coords(points1, points2);
+    }
+    get_points(){
+        // this.calculate_points();
+        // this.points()
+        return this.string_of_points;
+    }
+}
+
 export {
     circle,
-    jelly
+    jelly,
+    anything
 }
