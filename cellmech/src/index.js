@@ -1,5 +1,5 @@
 import * as shapes from './shapes.js';
-const ws = new WebSocket("wss://ec2-18-234-227-168.compute-1.amazonaws.com:8082");
+const ws = new WebSocket("ws://ec2-18-234-227-168.compute-1.amazonaws.com:8082");
 
 class item {
     constructor( id ,shape){
