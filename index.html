@@ -1,21 +1,109 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>utk</title>
-  </head>
-  <body>
-    <h1>Utkarsh Saraswat</h1>
-      <li>App</li>
-      <menu>
-        <li><a href = 'http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/'>Beehive</a></li>
-      </menu>
-      <li>More about me</li>
-      <menu>
-        <li><a href = 'files/utkarsh_CV.pdf'>CV</a></li>
-      </menu>
-      <li>Projects</li>
-        <menu>
-          <li><a href = 'files/ABG_Internship_report.pdf' target="_blank">PAC Report</a></li>
-        </menu>
-  </body>
-</html>
+<div class="container">
+  <style>
+
+      /* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
+      body {
+      background: #323232;
+      /* font-size: 2rem; */
+      /* font-weight: bold; */
+      }
+      body .container {
+      padding: 10rem;
+      }
+      body .row {
+      margin-top: calc(((5rem * 0.288) * -1 + 0.25rem));
+      display: flex;
+      /* flex-direction: row; */
+      /* align-items: center; */
+      justify-content: center;
+      }
+
+      .hexagon {
+      position: relative;
+      width: 20rem;
+      height: 10rem;
+      background-color: rgb(6, 255, 160);
+      margin: 2.44rem 0;
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* align-items:flex-end; */
+      transform: scale(1);
+      transition: all 0.25s ease-in-out;
+      }
+      .hexagon:hover {
+      transform: scale(0.75);
+      }
+      .hexagon:before, .hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 0;
+      border-left: 10rem solid transparent;
+      border-right: 10rem solid transparent;
+      }
+      .hexagon:before {
+      bottom: 100%;
+      border-bottom: 2.44rem solid rgb(6, 255, 160);
+      }
+      .hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 2.44rem solid rgb(6, 255, 160);
+      }
+      .hexagon_text{
+        font-family: 'Roboto', sans-serif;
+        font-size: 15;
+        text-decoration:none;
+        color: #323232;
+        position: relative;
+        text-align: center;
+        display: flex;
+        /* top: 50px; */
+      }
+      .hexagon_text  {
+        top: 10px;
+      }
+      .singlebee {
+        position: relative;
+        left: -10px;
+      }
+      .research_icon {
+        position: relative;
+        left: 15px;
+      }
+      .my_icon {
+        position: relative;
+        left: 0px;
+      }
+      .beehive_text {
+        position: relative;
+        left: 20px;
+      }
+      .research_text {
+        position: relative;
+        left: 0px;
+      }
+
+  </style>
+  <div class="row">
+    <div class="hexagon">
+      <a style="text-decoration: none;" href='http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/'>
+      <div class="singlebee" ><img src="images/singlebee.png" width="100" height="auto"></div>
+      <div class="hexagon_text beehive_text">BEEHIVE</div>
+    </div>
+    <div class="hexagon">
+      <a style="text-decoration: none;" href='files/utkarsh_CV.pdf'>
+        <div><img class='research_icon' src="images/research_icon.svg" width="50" height="auto"></div>
+        <div class="hexagon_text research_text">PROJECTS</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="hexagon">
+    <a style="text-decoration: none;" href='about.html'>
+      <div><img class='my_icon' src="images/my_icon.png" width="50" height="auto"></div>
+      <div class="hexagon_text research_text">ABOUT</div>
+  </div>
+  <script type="text/javascript" src="stylescript.js"></script>
+</div>
