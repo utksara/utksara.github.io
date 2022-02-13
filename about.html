@@ -1,0 +1,174 @@
+<div class="container">
+    <style>
+
+        /* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
+        body {
+        background: #323232;
+        /* font-size: 2rem; */
+        /* font-weight: bold; */
+        }
+        body .row {
+        /* margin-top: calc(((5rem * 0.288) * -1 + 0.25rem)); */
+        display: flex;
+        /* flex-direction: row; */
+        /* align-items: center; */
+        justify-content: center;
+        }
+
+        .hexagon {
+        position: relative;
+        width: 20rem;
+        height: 10rem;
+        background-color: rgb(6, 255, 160);
+        margin: 2.44rem 0;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* align-items:flex-end; */
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        }
+        .hexagon:hover {
+        transform: scale(0.95);
+        }
+        .hexagon:before, .hexagon:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        border-left: 10rem solid transparent;
+        border-right: 10rem solid transparent;
+        }
+        .hexagon:before {
+        bottom: 100%;
+        border-bottom: 2.44rem solid rgb(6, 255, 160);
+        }
+        .hexagon:after {
+        top: 100%;
+        width: 0;
+        border-top: 2.44rem solid rgb(6, 255, 160);
+        }
+      
+        .side_polygon {
+        position: relative;
+        width: 100rem;
+        height: 20rem;
+        background-color: rgb(252, 255, 98);
+        margin: 2.44rem 0;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* align-items:flex-end; */
+        transform: scale(1);
+        /* transition: all 0.25s ease-in-out; */
+        }
+        .side_polygon:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        border-left: 10rem solid transparent;
+        border-right: 28rem solid transparent;
+        top: 100%;
+        width: 0;
+        border-top: 2.44rem solid rgb(252, 255, 98);
+        }
+
+        .side_polygon_right {
+        position: relative;
+        width: 100rem;
+        height: 20rem;
+        background-color: rgb(252, 255, 98);
+        margin: 2.44rem 0;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* align-items:flex-end; */
+        transform: scale(1);
+        /* transition: all 0.25s ease-in-out; */
+        }
+        .side_polygon_right:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        border-left: 28rem solid transparent;
+        border-right: 10rem solid transparent;
+        top: 100%;
+        width: 0;
+        border-top: 2.44rem solid rgb(252, 255, 98);
+        }
+
+        .hexagon_text{
+          font-family: 'Roboto', sans-serif;
+          font-size: 15;
+          text-decoration:none;
+          color: #323232;
+          position: relative;
+          text-align: center;
+          display: flex;
+          /* top: 50px; */
+        }
+        .hexagon_text  {
+          top: 10px;
+        }
+        .research_icon {
+          position: relative;
+          left: 0px;
+        }
+        .research_text {
+          position: relative;
+          left: 15px;
+        }
+    </style>
+    <div class="row">
+      <div class="side_polygon_right">
+        <ul>
+          <h2>EDUCATION AND PROFESSION</h2>
+          <P style="font-family:'Roboto', sans-serif;">
+            I graduated from Indian Institute of Technology, Bombay with a Bachelor's degree in Chemical engineering.
+            I joined Siemens Digital Industries India pvt ltd, Pune in 2019 as Software Engineer and have been 
+            working there since then. 
+          </P>
+          <h2>CONTACT</h2>
+          <li style="font-family:'Roboto', sans-serif;">
+            Email: saraswat.utk@gmail.com
+          </li>
+          <li style="font-family:'Roboto', sans-serif;">
+            Github: utksara
+          </li>
+          <li style="font-family:'Roboto', sans-serif;">
+            Linkedin : utksara
+          </li>
+        </ul>
+      </div>
+      <div class="side_polygon">
+        <ul>
+          <h2>INTERSTS</h2>
+          <P style="font-family:'Roboto', sans-serif;">
+            I've always been excited with the natural phenomena, and the best way I have found
+            to study them is via computers. My aim was around modelling and simulation
+            with higher accuracy and speed. To achieve this I began to develop insterests in
+            HPC and Distributed computing. Currently, I am working on Beehive, an independent
+            project aimed to provide interface to develop graph based simulation declarativly. The idea
+            was inspired by graph theory lectures I had during college, and recent works on 
+            graphical neural networks in ML, which motivated me to apply similar solutions on 
+            modelling and simulation.
+          </P>
+          <p>
+            To know more about the Beehive, visit the Beehive link on<a href="index.html"> home page</a>
+          </p>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="hexagon">
+        <a style="text-decoration: none;" href='files/utkarsh_CV.pdf'>
+          <div><img class='research_icon' src="images/research_icon.svg" width="50" height="auto"></div>
+          <div class="hexagon_text research_text">CV</div>
+      </div>
+    <script type="text/javascript" src="stylescript.js"></script>
+  </div>
