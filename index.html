@@ -3,7 +3,7 @@
 
       /* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
       body {
-      background: #323232;
+      background: #f8f8f8;
       /* font-size: 2rem; */
       /* font-weight: bold; */
       }
@@ -18,36 +18,28 @@
       justify-content: center;
       }
 
-      .hexagon_yellow {
+      .textarea{
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-top: -4.5cm;
+      }
+
+      .about_me {
       position: relative;
-      width: 20rem;
-      height: 10rem;
-      background-color: rgb(252, 255, 98);
+      width: 45rem;
+      height: 35rem;
+      font-family: 'serif';   
+      font-style: normal;
+      color: rgb(44, 44, 44);;
+      background-color: rgb(255, 255, 255);
       margin: 2.44rem 0;
-      margin-right: 2rem;
+      margin-right: -15rem;
       display: flex;
       align-items: center;
       justify-content: center;
       /* align-items:flex-end; */
       transform: scale(1);
       transition: all 0.25s ease-in-out;
-      }
-      .hexagon_yellow:before, .hexagon_yellow:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      left: 0;
-      border-left: 10rem solid transparent;
-      border-right: 10rem solid transparent;
-      }
-      .hexagon_yellow:before {
-      bottom: 100%;
-      border-bottom: 2.44rem solid rgb(252, 255, 98);
-      }
-      .hexagon_yellow:after {
-      top: 100%;
-      width: 0;
-      border-top: 2.44rem solid rgb(252, 255, 98);
       }
 
       .hexagon {
@@ -60,7 +52,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'serif';
       /* align-items:flex-end; */
+      margin-top: 50cm;
       transform: scale(1);
       transition: all 0.25s ease-in-out;
       }
@@ -85,10 +79,10 @@
       border-top: 2.44rem solid rgb(6, 255, 160);
       }
       .hexagon_text{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'serif';
         font-size: 15;
         text-decoration:none;
-        color: #323232;
+        color: #661313;
         position: relative;
         text-align: center;
         display: flex;
@@ -101,46 +95,83 @@
         position: relative;
         left: -10px;
       }
-      .research_icon {
-        position: relative;
-        left: 15px;
+      .my_pic {
+        margin-top: 1cm;
+        margin-left: -4cm;
+        position: absolute;
+        left: 300px;
       }
-      .my_icon {
-        position: relative;
-        left: 0px;
+
+      .attachments{
+        margin-top: 5cm;
+        margin-left: -1.5cm;
+        position: absolute;
+        left: 300px;
+      }
+
+      .github {
+        margin-top: 1cm;
+      }
+
+      .linkedin {
+        margin-top: 1cm;
+      }
+
+      .cv {
+        margin-top: 1cm;
+      }
+      .beehive{
+        margin-top: 12cm;
+        margin-left: -4cm;
       }
       .beehive_text {
         position: relative;
         left: 20px;
       }
-      .research_text {
-        position: relative;
-        left: 0px;
-      }
 
   </style>
+
+<body>
+
   <div class="row">
-    <div class="hexagon_yellow"">
-      <div>UTKARSH SARASWAT</div>
+    <div class="about_me">
+      <div class="textarea">
+        Hello reader!
+        <br/>
+        <br/>
+        I am Utkarsh. I am currently pursuing masters studies in computational science and Engineering (from 2022) at the Technical university of Munich. Earlier, I worked at Siemens digital Industries, India as a software developer after completing my bachelor's degree in chemical engineering from Indian Institute of Technology, Mumbai in 2019.
+        <br/>
+        <br/>
+        During my undergrads I worked as a competition manager in the student body organizing Chemical engineering symposium in my college. I have a very diverse set of interests, which can be summarized as curiosity to explore new technologies, mainly in the interdisciplinary areas in engineering and computing.
+        <br/>
+        <br/>
+        I started working on an idea on creating a modeling and simulation framework using graph theory named “Beehive”, which is still under development. More about it can be found below.
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="hexagon">
-      <a style="text-decoration: none;" href='http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/'>
+
+    <div class="beehive">
+    <a style="text-decoration: none;" href='http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/'>
       <div class="singlebee" ><img src="images/singlebee.png" width="100" height="auto"></div>
       <div class="hexagon_text beehive_text">BEEHIVE</div>
     </div>
-    <div class="hexagon">
-      <a style="text-decoration: none;" href='projects.html'>
-        <div><img class='research_icon' src="images/research_icon.svg" width="50" height="auto"></div>
-        <div class="hexagon_text research_text">PROJECTS</div>
+
+    <div class="my_pic" ><img src="images/meiniitb.jpg" width="200" height="auto"></div>
+      <div class="attachments">
+      <div class="github" >
+        <a style="text-decoration: none;" href='https://github.com/utksara'>
+        <img src="images/github.png" width="20" height="auto">
+      </div>
+      <div class="linkedin" >
+        <a style="text-decoration: none;" href='https://www.linkedin.com/in/utksara/'>
+        <img src="images/linkedin.png" width="20" height="auto">
+      </div>
+      <div class="cv" >
+        <a style="text-decoration: none;" href='https://drive.google.com/file/d/1u_dHqSQNGXCSKtrGERXnOCi9JviqrPYF/view?usp=sharing'>
+        <img src="images/cv.png" width="20" height="auto">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="hexagon">
-    <a style="text-decoration: none;" href='about.html'>
-      <div><img class='my_icon' src="images/my_icon.png" width="50" height="auto"></div>
-      <div class="hexagon_text research_text">ABOUT</div>
   </div>
   <script type="text/javascript" src="stylescript.js"></script>
 </div>
+
+</body>
