@@ -1,184 +1,173 @@
-<div class="container">
-  <style>
 
-      /* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
-      body {
-      background: #f8f8f8;
-      /* font-size: 2rem; */
-      /* font-weight: bold; */
-      }
-      body .container {
-      padding: 1rem;
-      }
-      body .row {
-      margin-top: calc(((5rem * 0.288) * -1 + 0.25rem));
-      display: flex;
-      /* flex-direction: row; */
-      /* align-items: center; */
-      justify-content: center;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Introduction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            height: 90%;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .left-panel {
+            flex: 2;
+            padding: 20px;
+            background-color: #eef2f7;
+        }
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9fafc;
+            text-align: center;
+        }
+        .right-panel img {
+            max-width: 50%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #6c757d;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
 
-      .textarea{
-        margin-left: 1cm;
-        margin-right: 1cm;
-        margin-top: -3.5cm;
-      }
+        .others a {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #ff5470;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
 
-      .about_me {
-      position: relative;
-      width: 45rem;
-      height: 35rem;
-      font-family: 'serif';   
-      font-style: normal;
-      color: rgb(44, 44, 44);;
-      background-color: rgb(255, 255, 255);
-      margin: 2.44rem 0;
-      margin-right: -15rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* align-items:flex-end; */
-      transform: scale(1);
-      transition: all 0.25s ease-in-out;
-      }
-
-      .hexagon {
-      position: relative;
-      width: 20rem;
-      height: 10rem;
-      background-color: rgb(6, 255, 160);
-      margin: 2.44rem 0;
-      margin-right: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'serif';
-      /* align-items:flex-end; */
-      margin-top: 50cm;
-      transform: scale(1);
-      transition: all 0.25s ease-in-out;
-      }
-      .hexagon:hover {
-      transform: scale(0.95);
-      }
-      .hexagon:before, .hexagon:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      left: 0;
-      border-left: 10rem solid transparent;
-      border-right: 10rem solid transparent;
-      }
-      .hexagon:before {
-      bottom: 100%;
-      border-bottom: 2.44rem solid rgb(6, 255, 160);
-      }
-      .hexagon:after {
-      top: 100%;
-      width: 0;
-      border-top: 2.44rem solid rgb(6, 255, 160);
-      }
-      .hexagon_text{
-        font-family: 'serif';
-        font-size: 15;
-        text-decoration:none;
-        color: #661313;
-        position: relative;
-        text-align: center;
-        display: flex;
-        /* top: 50px; */
-      }
-      .hexagon_text  {
-        top: 10px;
-      }
-      .singlebee {
-        position: relative;
-        left: -10px;
-      }
-      .my_pic {
-        margin-top: 1cm;
-        margin-left: -4cm;
-        position: absolute;
-        left: 300px;
-      }
-
-      .attachments{
-        margin-top: 5cm;
-        margin-left: -1.5cm;
-        position: absolute;
-        left: 300px;
-      }
-
-      .github {
-        margin-top: 1cm;
-      }
-
-      .linkedin {
-        margin-top: 1cm;
-      }
-
-      .cv {
-        margin-top: 1cm;
-      }
-      .beehive{
-        margin-top: 12cm;
-        margin-left: -4cm;
-      }
-      .beehive_text {
-        position: relative;
-        left: 20px;
-      }
-
-  </style>
-
+        .links a {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .links a:hover {
+            background-color: #357ab8;
+        }
+        header .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header .nav-links li {
+            margin: 0 10px;
+        }
+        header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .recent-works {
+            margin-top: 40px;
+        }
+        .recent-works h2 {
+            color: #4a90e2;
+        }
+        .recent-works ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recent-works li {
+            margin: 10px 0;
+        }
+        .recent-works a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        .recent-works a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Hello, I'm Utkarsh</h1>
+            <!-- <h2>[Your Profession or Title]</h2> -->
+            <p>
+              I am currently pursuing a Master's degree in Computational Science and Engineering at the Technical University of Munich (since 2022). Previously, I worked part-time at Rohde & Schwarz in Munich and full-time at Siemens Digital Industries in Pune, India. I earned my Bachelor's degree in Chemical Engineering from the Indian Institute of Technology, Mumbai, in 2019.
+            </p>
+            <p>
+              I aspire to combine technology and ethics to foster a more cohesive society within a sustainable world. I am always eager to explore and discuss new ideas. If something here resonates with you, feel free to reach out—I’d love to connect! 
+            </p>
+            
+          <section id="works" class="recent-works">
+            <h2>Recent Works</h2>
+            <ul>
+                <li><a href="http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/" target="_blank">Beehive - AI based simulations</a></li>
+                <li><a href="https://github.com/utksara/Carbon-Footprint-Tracker" target="_blank">Carbon footprint tracker</a></li>
+            </ul>
 
-  <div class="row">
-    <div class="about_me">
-      <div class="textarea">
-        Hello reader!
-        <br/>
-        <br/>
-        I am Utkarsh, currently pursuing masters studies in computational science and Engineering (from 2022) at the Technical university of Munich. Earlier, I worked at Siemens digital Industries, India as a software developer after completing my bachelor's degree in chemical engineering from Indian Institute of Technology, Mumbai in 2019. During my undergraduate I worked as a competitions manager in the student body organizing Chemical engineering symposium in my college.
-        <br/>
-        <br/>
-        When it comes to interests, I have a huge and diverse set, be it studies, profession or even hobbies. I have had interdisciplinary exposure in engineering and computing and I am always curious to explore new things. Currently I am learning about graph machine learning and quantum computing, the two exciting areas which I feel can yield great progress in engineering technology.
-        <br/>
-        <br/>
-        I have independently developed a modeling and simulation framework based on graph theory named “Beehive”, which is still under progress. More about it can be found below.
-      </div>
+            <h2>Past Works</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1sfnRQznQllA4lbREnnI7TFFcOXYN4ZBa/view" target="_blank">Continuous process design for batch chemical plant (2018)</a></li>
+                <li><a target="_blank">Simulation of non-linear cell mechanics (2017)</a></li>
+                <li><a href="https://docs.google.com/document/d/1Py2ZQ2KIyDdiCQe6v909zVaGZPpI0p3HEqRPTKQv1oU/edit?tab=t.0" target="_blank">Tree climbing robot (2016)</a></li>
+            </ul>
+         </section>
+        </div>
+
+        
+        <div class="right-panel">
+            <img src="images/profile_pic.jpg" alt="profile pic">
+            <div class="links">
+                <a href="files/utkarsh_cv.pdf" target="_blank">CV</a>
+                <a href="https://github.com/utksara" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/utksara" target="_blank">LinkedIn</a>
+                <a href="mailto:sararswat.utk@gmail.com">Email Me</a>
+            </div>
+
+              <!-- <div class="others">
+                  <a href="https://your-blog-link.com" target="_blank">Blogs</a>
+                  <a href="https://your-artwork-gallery.com" target="_blank">Artwork</a>
+                  <a href="https://your-artwork-gallery.com" target="_blank">Clicks</a>
+              </div> -->
+          </div>
+
+        </div>
     </div>
-
-    <div class="beehive">
-    <a style="text-decoration: none;" href='http://ec2-18-234-227-168.compute-1.amazonaws.com:3000/'>
-      <div class="singlebee" ><img src="images/singlebee.png" width="100" height="auto"></div>
-      <div class="hexagon_text beehive_text">BEEHIVE</div>
-    </div>
-
-    <div class="my_pic" ><img src="images/meiniitb.jpg" width="200" height="auto"></div>
-      <div class="attachments">
-      <div class="github" >
-        <a style="text-decoration: none;" href='https://github.com/utksara'>
-        <img src="images/github.png" width="20" height="auto">
-      </div>
-      <div class="linkedin" >
-        <a style="text-decoration: none;" href='https://www.linkedin.com/in/utksara/'>
-        <img src="images/linkedin.png" width="20" height="auto">
-      </div>
-      <div class="linkedin" >
-        <a style="text-decoration: none;" href='https://drive.google.com/file/d/1sfnRQznQllA4lbREnnI7TFFcOXYN4ZBa/view?usp=sharing'>
-          <br/>
-          Internship report
-          <br/>
-        <!-- <img src="images/linkedin.png" width="20" height="auto"> -->
-      </div>
-      <!-- <div class="cv" >
-        <a style="text-decoration: none;" href='https://drive.google.com/file/d/1u_dHqSQNGXCSKtrGERXnOCi9JviqrPYF/view?usp=sharing'>
-        <img src="images/cv.png" width="20" height="auto">
-      </div> -->
-    </div>
-  </div>
-  <script type="text/javascript" src="stylescript.js"></script>
-</div>
-
 </body>
+</html>
