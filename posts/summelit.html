@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Title | My Custom Blog</title>
+    <style>
+        /* Reusing core styles for consistency */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #222;
+        }
+
+        .logo-placeholder {
+            width: 35px;
+            height: 35px;
+            background: #ff4757;
+            border-radius: 6px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .post-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        .post-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .meta {
+            color: #888;
+            font-style: italic;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: #ddd;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+        }
+
+        .post-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #222;
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <div class="logo-placeholder">B</div>
+            <span style="font-size: 1.2rem; font-weight: bold;">MyBlog</span>
+        </a>
+    </header>
+
+    <article class="post-container">
+        <div class="post-header">
+            <!-- <div class="meta">Published Jan 31, 2025 • 10 min read</div> -->
+            <h1>Cell Mechanics Simulation with CytoViz</h1>
+        </div>
+
+        <img src="../images/cytoviz_logo.png" alt="Minimalist Design Cover" class="featured-image">
+        <!-- <div class="featured-image"
+            style="display: flex; align-items: center; justify-content: center; background: #eee; color: #999;">
+            [Featured Image Placeholder]
+        </div> -->
+
+        <div class="post-content">
+
+            <h3> A brief introduction to Data-Driven Simulations</h3>
+            <p> Almost anyone working right now in the tech or engineering domain must have heard the term "digital
+                twin" by now at least once. A generic definition of a digital twin is a comprehensive, real-time visual
+                representation of a real-world phenomenon, physical object, or system. There are several ways to
+                interpret this definition, but it doesn’t provide a clear picture of what a digital twin is. Is it just
+                another way of saying simulation? In that case, what is new here, since we have been using simulation
+                software for industrial use cases for a long time? One can say the crucial aspect of a digital twin is
+                real-time processing and simulation of data, which can create a hyperrealistic digital version of your
+                setup. For example, if you have a coffee machine and you decide to build a digital twin of it, it will
+                collect data in real time from the brewing process, including the precise amount of coffee bean, the
+                amount of moisture content in them, the statistics of the size of coffee granules after grading, the
+                humidity ofthe environment, hardness of water used in the brewing process, temperature and pressure,
+                precise dimension of brewing instruments, and many more to list. The coffee prepared by the digital twin
+                is expected to be almost identical to the coffee you prepare in real life. Obviously, there is no way to
+                taste and check the digital coffee, but you can definitely measure the concentration of the aromatic
+                compounds that give a coffee its flavor. Assuming the overall one-time cost to run the coffee machine
+                digital twin is reasonably less than the price of coffee beans and the cost of operating the machine
+                several times to figure out the right proportions of your coffee, a digital twin can give you exact
+                values of all relevant parameters that make your coffee fit for your taste.</p>
+
+            <p>That was just a simple example of what a digital twin could look like. In conventional computer
+                simulations, we typically use a small subset of a physical object's parameters to predict certain
+                properties. Prediction is performed using known laws and equations governing the system's physics. As an
+                example, to examine bending stress in a mechanical device, we just need to know its structural
+                properties like Young's modulus, Poisson's ratios, and geometry. But in digital twins and data-driven
+                systems, the other, in addition to combining voluminous amounts of a system's parameters to simulate
+                multiple properties, also performs data-based prediction from an external feed. Purely law- and
+                equation-based simulations are prone to errors and deviations from the real system, due to numerical
+                errors and intricacies that mathematical equations cannot always capture. With the advent of data
+                science, machine learning, and artificial intelligence over the last decade, it is possible to combine
+                physics-based constraints with data to predict system properties with very high accuracy, which often
+                improves with more data or context. However data data-driven approaches are also costly to implement,
+                and there is always a chance we end up over-engineering our problem. A balanced intermediate could be a
+                data-driven framework that provides the users complexity of a digital twin while maintaining the
+                lightweight nature of traditional simulation frameworks.</p>
+            <h3>CytoViz: A platform for data-driven and query-based simulation for Microbiology and material science
+            </h3>
+
+            <a href="https://genviz-774476626343.europe-west1.run.app/cell_mechanics/" style="color: #ff4757; text-decoration: underline;">Try CytoViz yourself</a>
+            <p>Oftentimes, our requirements in simulations are not the generation of large amounts of data by predicting
+                every possible aspect of the problem, but rather the storage and efficient analysis of our experimental
+                data. For example, consider a research lab that conducts cell experiments every day and stores the data
+                in Excel sheets. Over the course of a year, if laboratory staff members want to analyze data or recall
+                the details of specific experiments, they can use an Excel sheet and other data analysis tools. But this
+                is often a time-consuming process that involves extensive preprocessing and intermediate steps. Usually,
+                the description of the problems is intuitively well developed in mind, but transforming them into Excel
+                commands or MATLAB scripts can be tedious. Additionally, performing experiments is are vivid experience
+                for humans. Plotting graphs and publishing figures do not provide the same level of insight as a visual
+                setup of the experiment as it was performed. Humans can easily define their problems in words and
+                queries. For example, “search all the experiments where cell shape was changing with time”, “search the
+                experiment where the cell shrank when exposed to a certain drug.” A framework that can automate
+                intermediate tasks by directly translating while also providing a query-based simulation framework with
+                minimalistic visualization of the actual experimental setup would be a cost-effective and valuable
+                solution to this problem.</p>
+            <p>
+                In summary, we are developing a query-based simulation framework that combines data-driven approaches
+                and physics to build a lightweight digital twin of laboratory experiments in microbiology and materials
+                science. Our current product focuses on computational analysis of cell mechanics, which is the study of
+                the mechanical properties and behavior of living cells and their correlations with cell function. Cell
+                mechanics have crucial applications in cancer research and other non-pathogenic diseases. A typical
+                experimental setup in cell mechanics involves observing a single cell or a small cluster of cells on a
+                soft material substrate under a microscope. The position and shape of the cell are observed over time,
+                along with the substrate on which the cell is prepared. Post-experimental analysis involves calculating
+                the traction force (the force exerted by the cell in isolation on its environment) and changes in
+                movement and shape over time. Current frameworks provide analysis tools for individual tasks, such as a
+                traction force calculator and cell segmentation. However, there is no centralized tool for all cell
+                mechanics calculations that provides these functionalities as a single module with a user-friendly
+                interface. Additionally, most modules offer a GUI-based simulation or a pure coding-based simulation
+                interface. While GUIs can be easy to learn, they offer little versatility, and some users may find GUIs
+                cumbersome. On the other hand, a coding-based framework technically offers full flexibility, but
+                deep-diving into a 3rd-party codebase and making modifications tailored to your needs can be extremely
+                time-consuming and draining. Our Summelit CytoViz app offers a query-based simulation comprehensively
+                covering cell mechanics tasks, allowing users to process, validate, and even generate virtual versions
+                of their experiments. With the help of the Summelit CytoViz module, users can replicate their
+                experimental setup almost immediately by uploading all relevant files in raw format (requiring no
+                intermediate processing) and providing context for the data in human-readable language or via a query.
+                In addition, users can create new experimental setups in CytoViz without physically setting up any
+                equipment, using the same declarative paradigm that supports human-readable text and a bit of context in
+                the form of files or text, thereby providing a convenient, intuitive, and faster experience for
+                experimental design and analysis.
+            </p>
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Summelit</p>
+    </footer>
+
+</body>
+
+</html>
